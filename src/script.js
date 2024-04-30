@@ -8,6 +8,22 @@ function calculadora(num1, num2, operador){
   let num2 = parseInt(num2)
   let resultado
 
+  switch (operador) {
+    case "+":
+      resultado = num1 + num2
+      break;
+    case "-":
+      resultado = num1 - num2
+      break;
+    case "*":
+      resultado = num1 * num2
+      break;
+    case "/":
+      resultado = num1 / num2
+      break;
+    
+  }
+
 }
 
   
