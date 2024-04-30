@@ -2,10 +2,11 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //ESCREVA SEU CÓDIGO AQUI!!
-
-function calculadora(num1, num2, operador){
-  let num1 = parseInt(num1)
-  let num2 = parseInt(num2)
+//embaixo foi criado a função com os parametros dos numeros e do operador, em seguida foi a conversão das variaveis para parseint(num1, num2)
+//o switch foi criado para o usuario escolher qual operação irá ser realizada, e no final contendo a exponenciação com um loop while até quando o contador for menor que o expoente
+function Calculadora(nume1, nume2, operador){
+  let num1 = parseInt(nume1)
+  let num2 = parseInt(nume2)
   let resultado
 
   switch (operador) {
@@ -21,8 +22,19 @@ function calculadora(num1, num2, operador){
     case "/":
       resultado = num1 / num2
       break;
-    
+    case "e":
+      let contador = 1
+      resultado = num1 * num1
+      while (contador < num2 - 1) {
+        resultado = resultado * num1
+        contador++
+      }
+      break;
   }
+  if (resultado == undefined || resultado > 1000000)
+    resultado = "erro"
+
+    return resultado
 
 }
 
